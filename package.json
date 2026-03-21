@@ -2,8 +2,12 @@
   "name": "task-tracker-2",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/server.js",
+  "type": "module",
   "scripts": {
+    "dev": "nodemon --exec ts-node src/server.ts",
+    "build": "prisma generate && tsc",
+    "start": "node dist/server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -13,7 +17,6 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
   "bugs": {
     "url": "https://github.com/kratham001/task-tracker-2/issues"
   },
